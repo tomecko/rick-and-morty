@@ -4,7 +4,7 @@
 
 https://rick-and-morty.tomaszoledzki.pl/ (deployed via CircleCI)
 
-Note: `rickandmortyapi` seems to be misconfigured, sometimes it does not respond with data for me, sometimes it does :)
+Note: `rickandmortyapi` seems to be misconfigured, sometimes it does not respond with data for me, sometimes it does :) Works like a charm on localhost.
 
 ## Quick Start
 
