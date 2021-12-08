@@ -1,0 +1,107 @@
+@import "../../shared/styles/config.scss";
+
+.charactersList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+$characterMargin: 1rem;
+.character,
+.emptyCharacter {
+  $width: calc((100% - #{3 * $characterMargin}) / 4);
+  width: $width;
+  max-width: $width;
+
+  box-sizing: border-box;
+  margin-bottom: $characterMargin;
+  margin-right: $characterMargin;
+}
+
+// TODO: refactor/deduplicate below media queries
+// TODO: store breakpoint values in config
+@media (min-width: 1201px) {
+  .character,
+  .emptyCharacter {
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .character,
+  .emptyCharacter {
+    $margin: 1rem;
+    $width: calc((100% - #{2 * $characterMargin}) / 3);
+    width: $width;
+    max-width: $width;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: 551px) and (max-width: 800px) {
+  .character,
+  .emptyCharacter {
+    $width: calc((100% - #{$characterMargin}) / 2);
+    width: $width;
+    max-width: $width;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .character,
+  .emptyCharacter {
+    $width: 100%;
+    width: $width;
+    max-width: $width;
+    margin-right: 0;
+  }
+}
+
+.character {
+  background: $standard-color;
+  color: $standard-text-color;
+
+  &:hover,
+  &:focus-within {
+    background: $accent-color;
+    transform: scale(1.03);
+    transition: all $transition-time;
+
+    .characterName {
+      color: $accent-text-color;
+    }
+  }
+
+  .characterLink {
+    display: flex;
+    align-items: center;
+  }
+
+  .characterName {
+    overflow: hidden;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.emptyCharacter {
+  background-color: $standard-color;
+  height: 50px;
+}
+
+@media (min-width: 551px) {
+  .topNavigation {
+    display: none;
+  }
+}

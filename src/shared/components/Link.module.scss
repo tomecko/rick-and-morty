@@ -1,0 +1,20 @@
+@import "../styles/config.scss";
+
+.link {
+  background: $standard-color;
+  display: inline-block;
+  color: $standard-text-color;
+  padding: 1rem 2rem;
+  transition: background-color $transition-time, color $transition-time;
+
+  &:not(.disabled):hover,
+  &:not(.disabled):focus {
+    background: $accent-color;
+    color: $accent-text-color;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}

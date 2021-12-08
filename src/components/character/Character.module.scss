@@ -1,0 +1,29 @@
+@import "../../shared/styles/config.scss";
+
+.back {
+  margin-bottom: 2rem;
+}
+
+.characterInfoWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .characterInfoImage {
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+  }
+
+  .characterInfo {
+    min-width: 20rem;
+
+    .infoItem {
+      margin-bottom: 0.6rem;
+    }
+
+    .label {
+      color: $accent-color;
+      display: block;
+      font-size: 0.85rem;
+    }
+  }
+}

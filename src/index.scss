@@ -1,0 +1,35 @@
+@import "shared/styles/config.scss";
+
+body,
+html {
+  background: $main-background-color;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+* {
+  color: $standard-text-color;
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2 {
+  color: $accent-color;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
