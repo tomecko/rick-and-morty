@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   CHARACTER,
@@ -13,11 +13,16 @@ import { store } from "../../store";
 import { CHARACTER_INFO_LIST_CONFIG } from "./config";
 import styles from "./Character.module.scss";
 
+const useScrollToTop = (id: string) => {
+  useEffect(() => window.scrollTo(0, 0), [id]);
+};
+
 interface Props {
   id: string;
 }
 
 export function Character(props: Props) {
+  useScrollToTop(props.id);
   return (
     <>
       <BackLink />
